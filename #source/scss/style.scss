@@ -1,0 +1,105 @@
+@import "nullstyle.scss";
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap');
+@font-face {
+	font-family: 'MyriadPro';
+	src: url('../fonts/MyriadPro-Regular.eot');
+	src: local('☺'), url('../fonts/MyriadPro-Regular.woff') format('woff'), url('../fonts/MyriadPro-Regular.ttf') format('truetype'), url('../fonts/MyriadPro-Regular.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+.ibg {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    img {
+     display: none;
+    }
+}
+.header-block {
+    top: 140px;
+    padding-top: 50px;
+    text-align: center;
+    &__title {
+        font-size: 34px;
+        font-weight: 700;
+        letter-spacing: 8.95px;
+        text-transform: uppercase;
+        position: relative;
+        padding: 0 0 30px 0;
+        text-align: center;
+        &::after {
+            content: '';
+            width: 81px;
+            height: 1px;
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            margin: 0 0 0 -40.5px;
+            background-color: #000;
+        }
+        font-family: Roboto;
+    }
+
+    &__subtitle {
+        padding: 30px 15px;
+        color: #868585;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 25.89px;
+        max-width: 100%;
+        margin: 0 85px;
+        display: flex;
+        font-family: Roboto;
+        @media (max-width: 991px) {
+            margin: 0;
+        }
+    }
+}
+.scrollTop {
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 13px;
+    right: 15px;
+    display: none;
+    z-index: 2;
+    @media (max-width: 374px) {
+        bottom: 10px;
+    }
+    span {
+        width: 2px;
+        height: 15px;
+        background-color: #3c3c3c;
+        position: absolute;
+        bottom: 7px;
+        right: 14px;
+    }
+    &:after, &:before {
+        content: '';
+        width: 2px;
+        height: 10px;
+        background-color: #3c3c3c;
+        position: absolute;
+    }
+    &:after {
+        transform: rotate(-45deg);
+        right: 11px;
+        top: 7px;
+    }
+    &:before {
+        transform: rotate(45deg);
+        left: 11px;
+        top: 7px;
+    }
+    &:hover {
+        background-color: #bebebe;  
+    }
+}
